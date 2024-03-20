@@ -1,0 +1,25 @@
+version: '3'
+services:
+  con1_server:
+    image: jazibahmad/con1_image
+    container_name: con1_server
+    ports:
+      - "6000:6000"
+    volumes:
+      - .:/storage/
+    networks:
+      - my-network
+
+  con2_server:
+    image: jazibahmad/con2_image
+    container_name: con2_server
+    ports:
+      - "7301:7301"
+    volumes:
+      - .:/storage/
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
