@@ -16,14 +16,7 @@ const connection = mysql.createConnection({
     database: 'products'
 });
 
-// local database
-// const connection = mysql.createConnection({
-//     host: '127.0.0.1',
-//     post: '3306',
-//     user: 'root',
-//     password: '@Allahisone1',
-//     database: 'products'
-// });
+
 
 // Connect to MySQL
 connection.connect((err) => {
